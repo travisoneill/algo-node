@@ -8,6 +8,11 @@ const BodyParser = require('body-parser');
 
 Server.use(BodyParser.json())
 
+Server.get('/test', function(req, res){
+  console.log("Hello.  Node Server is running");
+  res.send("Hello.  Node Server is running");
+});
+
 Server.post('/api/algos', function(req, res){
   let data = Controller.receiveCode(req.body);
   console.log(data);
