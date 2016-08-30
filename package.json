@@ -1,11 +1,11 @@
 {
-  "name": "benchmark",
+  "name": "algo-arena-benchmark",
   "version": "1.0.0",
   "engines": {
     "node": "6.2.0"
   },
   "description": "",
-  "main": "main.js",
+  "main": "node_server.js",
   "scripts": {
     "start": "node node_server.js",
     "deploy": "gcloud app deploy",
