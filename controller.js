@@ -1,5 +1,4 @@
-'use strict';
-// const VM = require('./vm');
+const VM = require('./vm');
 
 module.exports = {
   receiveCode(codeObj) {
@@ -17,7 +16,7 @@ module.exports = {
     for (let i = 0; i < lengthArr.length; i++) {
       try {
           let n = lengthArr[i];
-          // let res = VM.bootVM(method, name, n);
+          let res = VM.bootVM(method, name, n);
           results.push({x: n, y: res});
           if(res > 20000){ break; }
       } catch(e) {
