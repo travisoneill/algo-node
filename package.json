@@ -2,11 +2,14 @@
   "name": "benchmark",
   "version": "1.0.0",
   "engines": {
-    "node": "6.2.1"
+    "node": "~6.2.1"
   },
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "gcloud app deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

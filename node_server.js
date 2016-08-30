@@ -20,12 +20,16 @@ Server.post('/api/algos', function(req, res){
 });
 
 // FOR LIVE SERVER
-// Server.listen(process.env.PORT, function(){
+if (module === require.main) {
+  const server = Server.listen(process.env.PORT || 8001, function () {
+    const port = server.address().port;
+    console.log('Node Server listening on port %s', port);
+  });
+}
+
+
+// // FOR DEV SERVER
+// Server.listen( process.env.PORT || 8001, function(){
 //   console.log('Server Running');
 // });
-
-
-// FOR DEV SERVER
-Server.listen(8001, function(){
-  console.log('Server Running');
-});
+module.exports = server;
