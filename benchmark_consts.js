@@ -1,3 +1,5 @@
+'use strict'
+
 const testArrayMaker =
   `
     var maker = function make(n){
