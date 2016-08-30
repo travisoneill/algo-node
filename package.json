@@ -1,6 +1,7 @@
 {
   "name": "algo-arena-benchmark",
   "version": "1.0.0",
+  "description": "description",
   "engines": {
     "node": "~6"
   },
@@ -10,6 +11,10 @@
     "start": "node node_server.js",
     "deploy": "gcloud app deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://source.developers.google.com/p/tough-hull-141417/r/default"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
