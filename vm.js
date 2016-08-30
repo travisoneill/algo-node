@@ -1,4 +1,4 @@
-const {VM} = require('vm2');
+const VM = require('vm2');
 const BenchmarkConstants = require('./benchmark_consts');
 
 module.exports = {
