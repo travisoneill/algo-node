@@ -3,7 +3,7 @@
 const Express = require('express');
 const Server = Express();
 const Path = require('path');
-// const Controller = require('./controller');
+const Controller = require('./controller');
 const BodyParser = require('body-parser');
 
 Server.use(BodyParser.json())
@@ -19,7 +19,7 @@ Server.get('/test', function(req, res){
 });
 
 Server.post('/api/algos', function(req, res){
-  // let data = Controller.receiveCode(req.body);
+  let data = Controller.receiveCode(req.body);
   console.log(data);
   res.send(data);
 });
