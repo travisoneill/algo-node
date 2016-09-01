@@ -19,14 +19,17 @@ Server.get('/test', function(req, res){
 });
 
 Server.post('/api/algos', function(req, res){
+  // console.log("REQUEST BODY")
+  // console.log(req.body);
   let data = Controller.receiveCode(req.body);
-  console.log(data);
+  // console.log("BENCHMARK RESULTS")
+  // console.log(data);
   res.send(data);
 });
 
 // FOR LIVE SERVER
 if (module === require.main) {
-  var server = Server.listen(process.env.PORT || 8080, function () {
+  var server = Server.listen(process.env.PORT || 8001, function () {
     var port = server.address().port;
     console.log('Node Server listening on port %s', port);
   });

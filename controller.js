@@ -1,3 +1,5 @@
+'use strict';
+
 const VM = require('./vm');
 
 module.exports = {
@@ -6,6 +8,7 @@ module.exports = {
     const requestData = codeObj.request_data;
     const method = requestData.method;
     const name = requestData.name;
+    console.log(method);
     return this.testCode(method, name, lengthArr);
   },
 
